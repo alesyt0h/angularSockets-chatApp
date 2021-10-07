@@ -1,0 +1,13 @@
+<!-- Mine -->
+<!-- <div style="background-color: rgb(9, 255, 0);" class="fixed-bottom" *ngIf="getStatus === true;Else pepe">{{getStatus}}</div>
+<ng-template #pepe >
+    <div style="background-color: rgb(255, 0, 0);" class="fixed-bottom">
+        {{getStatus}}
+    </div>
+</ng-template> -->
+
+<footer class="p-2 bg-dark text-white text-end">
+    Server status:
+    <span class="text-success" *ngIf="getStatus">Online</span>
+    <span class="text-danger"  *ngIf="!getStatus">Offline</span>
+</footer>
