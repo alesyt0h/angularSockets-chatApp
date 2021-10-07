@@ -37,7 +37,7 @@ export class ChatComponent implements OnInit, OnDestroy {
             setTimeout(() => {
                 this.elemento.scrollTop = this.elemento.scrollHeight;
             }, 50);
-        })
+        });
     }
 
     enviar(){
