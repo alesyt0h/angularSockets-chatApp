@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, Router } from '@angular/router';
 import { WebsocketService } from '../services/websocket.service';
 
 @Injectable({
@@ -18,7 +17,5 @@ export class UsuarioGuard implements CanActivate {
         } else {
             return true;
         }
-
     }
-
 }

@@ -7,7 +7,7 @@ import { UsuarioGuard } from './guards/usuario.guard';
 
 const appRoutes: Routes = [
     { path: '', component: LoginComponent},
-    { path: 'mensajes', component: MensajesComponent, canActivate: [UsuarioGuard]},
+    { path: 'mensajes', component: MensajesComponent, canActivate: [UsuarioGuard], canLoad: [UsuarioGuard]},
     { path: '**', component: LoginComponent}
 ];
 

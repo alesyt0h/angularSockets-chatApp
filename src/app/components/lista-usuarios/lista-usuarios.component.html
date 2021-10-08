@@ -1,1 +1,17 @@
-<p>lista-usuarios works!</p>
+<h1>Usuarios</h1>
+<hr>
+
+<ul class="list-group">
+    <li class="list-group-item font-black"
+        *ngFor="let usuario of usuariosActivos$ | async">
+        {{usuario.nombre}}
+        <span class="badge bg-primary">
+            {{usuario.sala}}
+        </span>
+        <br>
+        <span class="badge bg-info">
+            {{usuario.id}}
+        </span>
+    </li>
+</ul>
+

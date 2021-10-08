@@ -9,14 +9,12 @@ export class ChatService {
   constructor(private wsService: WebsocketService) { }
 
   sendMessage(mensaje: string){
-
     const payload = {
-      de: this.wsService.getUsuario().nombre,
+      de: this.wsService.getUsuario()!.nombre,
       cuerpo: mensaje
     };
 
     this.wsService.emit('mensaje',payload);
-
   }
 
   getMessages(){
@@ -27,4 +25,11 @@ export class ChatService {
       return this.wsService.listen('mensaje-privado');
   }
 
+  getUsuariosActivos(){
+      return this.wsService.listen('usuarios-activos');
+  }
+
+  emitirUsuariosActivos(){
+    this.wsService.emit('obtener-usuarios');
+  }
 }
